@@ -1,0 +1,113 @@
+:root {
+  --bg-start: #667eea;
+  --bg-end: #764ba2;
+  --card: #ffffff;
+  --text: #2d3748;
+  --accent: #6c63ff;
+  --accent-dark: #5a52e0;
+  --border: #e2e8f0;
+  --result-bg: #f0eeff;
+  --success: #2f855a;
+  --error: #e53e3e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, var(--bg-start), var(--bg-end));
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  color: var(--text);
+}
+
+#converter {
+  max-width: 440px;
+  margin: 50px auto;
+  background: var(--card);
+  padding: 32px 28px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+input, select {
+  padding: 12px;
+  font-size: 15px;
+  color: var(--text);
+  background: #f8fafc;
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input:focus, select:focus {
+  border-color: var(--accent);
+}
+
+#amount {
+  width: 100%;
+  margin-bottom: 14px;
+}
+
+select {
+  width: 42%;
+}
+
+span {
+  display: inline-block;
+  width: 10%;
+  color: #718096;
+  font-weight: bold;
+}
+
+#convertBtn {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: var(--accent);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+#convertBtn:hover {
+  background: var(--accent-dark);
+}
+
+#convertBtn:active {
+  transform: scale(0.98);
+}
+
+#result {
+  margin-top: 20px;
+  padding: 14px;
+  background: var(--result-bg);
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--success);
+}
+
+#result:empty {
+  display: none;
+}
+
+#result.error {
+  background: #fff5f5;
+  color: var(--error);
+}
